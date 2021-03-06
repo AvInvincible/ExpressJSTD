@@ -1,0 +1,31 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title #{pageTitle}
+        link(rel="stylesheet", href="/css/style.css")
+    body 
+        header.main-header
+            nav.main-header_nav
+                ul.main-header_list
+                    li.main-header-list-item
+                        a.active(href="/") Shop
+                    li.main-header-list-item
+                        a.active(href="/admin/add-product") Add product
+
+        main
+            h1 My Product
+            .grid 
+                each prod in productList
+                    article.card-article-product 
+                        header.card-header-product
+                            h1.card-product-title #{prod.title}
+                        div.card-product-img
+                            img(src="http://joombig.com/demo-extensions1/images/gallery_slider/Swan_large.jpg", alt="product image")
+                        div.card-product-content
+                            h2.product-price $12.5
+                            p.product-description Call that resultant function with your data, and voilà!, it will return a string of HTML rendered with your data.
+                        div.card-action
+                            button.card-btn Add to cart
